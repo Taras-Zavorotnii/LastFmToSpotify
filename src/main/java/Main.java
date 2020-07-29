@@ -23,7 +23,7 @@ public class Main {
     private static final RestTemplate REST_TEMPLATE = getRestTemplate();
     private static final String LAST_FM_API_KEY = "ff341e2c1cc09a23b195f001440e9b7a";
 
-    private static final String LAST_FM_USER_NAME = "[YOU_LAST_FM_USER_NAME]";
+    private static final String LAST_FM_USER_NAME = "[YOUR_LAST_FM_USER_NAME]";
     
     // Get one from https://developer.spotify.com/console/put-current-user-saved-tracks
     private static final String SPOTIFY_AUTH_HEADER = "Bearer [JTW]";
