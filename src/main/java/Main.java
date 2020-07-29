@@ -43,11 +43,7 @@ public class Main {
     private static List<LastFmTrack> getLastFmLovedTracks() throws URISyntaxException {
         var request = new HttpEntity(null, null);
         var uri = "http://ws.audioscrobbler.com/2.0/?method=user.getlovedtracks&user=" + LAST_FM_USER_NAME + "&api_key=" + LAST_FM_API_KEY + "&format=json&limit=1000";
-        var response = REST_TEMPLATE.exchange(
-                new URI(uri),
-                HttpMethod.GET,
-                request,
-                String.class);
+        var response = REST_TEMPLATE.exchange(new URI(uri), HttpMethod.GET, request, String.class);
         var lastFmResponse = GSON.fromJson(response.getBody(), LastFmResponse.class);
 
         return lastFmResponse.getLovedtracks().getTrack();
